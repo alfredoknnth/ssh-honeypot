@@ -15,7 +15,7 @@ except FileNotFoundError:
 
 class SSHServer(paramiko.ServerInterface):
     def check_auth_password(self, username, password) -> int:
-        if username not in ALLOWED_USERNAME or password not SSH_PASSWORD:
+        if username not in ALLOWED_USERNAME or password != SSH_PASSWORD:
             print(f"[!] Failed login attempt: {username}:{password}")
             log_login(username, password, 0)
             return paramiko.AUTH_FAILED
