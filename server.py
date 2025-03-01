@@ -62,7 +62,7 @@ def handle_client(client):
             
         print("[+] Client connected")
         channel.send("Welcome to Ubuntu 15.04 (GNU/Linux 3.19.0-15-generic x86_64)\n\r")
-        channel.send(f"{usr}@{SSH_HOST}:~$")
+        channel.send(f"{usr}@{SSH_HOST}:~$ ")
 
         while True:
             try:
