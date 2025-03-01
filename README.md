@@ -18,7 +18,7 @@ I coded a SSH Honeypot using python from scratch. This code will simulate a SSH 
   You can download the free GeoLite database from maxmind, but you need your free license key. Make sure that you have an maxmind account and download the database into the directory
   ```
   curl "https://download.maxmind.com/app/geoip_download_by_token?edition_id=GeoLite2-City&license_key={LICENSE KEY HERE}&suffix=mmdb.gz" -o GeoLite2-City-database.tar.gz \
-    && tar -xzvf GeoLite2-Country.tar.gz
+    && tar -xzvf GeoLite2-City.tar.gz
   ```
 ## How to run?
 - Clone this repository into your local directory
