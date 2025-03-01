@@ -1,5 +1,5 @@
 # SSH Honeypot
-I coded a SSH Honeypot using python from scratch. This code will simulate a SSH Server for attackers to connect and they're gonna spend their time to attach the server (bruteforce attack, etc)
+I coded a SSH Honeypot using python from scratch. This code will simulate a SSH Server for attackers to connect and they're gonna spend their time to attack the server (bruteforce attack, etc)
 ## Features
 - Log the connection and geolocation of the attacker
 - Bruteforce attack detector
