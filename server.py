@@ -1,4 +1,4 @@
-from config import SSH_HOST, SSH_PORT, ALLOWED_USERNAME, SSH_KEY
+from config import SSH_HOST, SSH_PORT, ALLOWED_USERNAME, SSH_KEY, SSH_PASSWORD
 from logger import log_connection, log_login
 from detector import detect_bruteforce
 import socket
@@ -15,7 +15,7 @@ except FileNotFoundError:
 
 class SSHServer(paramiko.ServerInterface):
     def check_auth_password(self, username, password) -> int:
-        if username not in ALLOWED_USERNAME:
+        if username not in ALLOWED_USERNAME or password not SSH_PASSWORD:
             print(f"[!] Failed login attempt: {username}:{password}")
             log_login(username, password, 0)
             return paramiko.AUTH_FAILED
